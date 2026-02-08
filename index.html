@@ -7,93 +7,72 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{
-    box-sizing:border-box;
-}
-
 body{
-    background:radial-gradient(circle at top, #111, #000);
-    color:#ffffff;
-    font-family: Arial, sans-serif;
-    text-align:center;
     margin:0;
-    padding:0;
-    overflow-x:hidden;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
 }
 
 .container{
-    max-width:420px;
-    margin:90px auto;
-    opacity:0;
-    animation:fadeIn 1.2s ease forwards;
+    width:360px;
+    text-align:center;
+    animation:zoomIn 1s ease forwards;
 }
 
 h1{
-    margin-bottom:8px;
-    letter-spacing:1px;
+    margin-bottom:5px;
 }
 
 p{
-    opacity:0.6;
-    margin-bottom:40px;
+    opacity:0.8;
+    margin-bottom:30px;
 }
 
 .link{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:14px;
-    background:linear-gradient(145deg, #1a1a1a, #0e0e0e);
+    gap:12px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    padding:16px;
+    margin:14px 0;
+    border-radius:14px;
     color:white;
     text-decoration:none;
-    padding:16px;
-    margin:16px 0;
-    border-radius:14px;
     font-size:16px;
-    transition:transform 0.35s ease, box-shadow 0.35s ease;
-    animation:slideUp 0.8s ease forwards;
+    animation:slideIn 0.8s ease forwards;
+    transition:0.3s;
 }
 
-.link:nth-child(3){ animation-delay:0.2s }
-.link:nth-child(4){ animation-delay:0.35s }
-.link:nth-child(5){ animation-delay:0.5s }
-.link:nth-child(6){ animation-delay:0.65s }
-
-.link i{
-    font-size:20px;
-    transition:transform 0.3s ease;
-}
+.link:nth-child(3){animation-delay:0.1s}
+.link:nth-child(4){animation-delay:0.25s}
+.link:nth-child(5){animation-delay:0.4s}
+.link:nth-child(6){animation-delay:0.55s}
 
 .link:hover{
-    transform:translateY(-4px) scale(1.02);
-    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+    transform:scale(1.08);
+    background:rgba(255,255,255,0.25);
 }
 
-.link:hover i{
-    transform:scale(1.2);
+.link i{
+    font-size:22px;
 }
 
 /* Animations */
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+@keyframes zoomIn{
+    from{opacity:0; transform:scale(0.8)}
+    to{opacity:1; transform:scale(1)}
 }
 
-@keyframes slideUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+@keyframes slideIn{
+    from{opacity:0; transform:translateY(30px)}
+    to{opacity:1; transform:translateY(0)}
 }
 </style>
 </head>
@@ -101,7 +80,7 @@ p{
 <body>
 <div class="container">
     <h1>Ahmed</h1>
-    <p>روابط حساباتي الرسمية</p>
+    <p>روابط حساباتي</p>
 
     <a class="link" href="https://youtube.com" target="_blank">
         <i class="fa-brands fa-youtube"></i> YouTube
