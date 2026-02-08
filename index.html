@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>روابط أحمد</title>
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body{
     background:#0b0b0b;
@@ -15,33 +18,41 @@ body{
 }
 
 .container{
-    max-width:400px;
+    max-width:420px;
     margin:80px auto;
 }
 
 h1{
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 p{
-    opacity:0.7;
-    margin-bottom:30px;
+    opacity:0.6;
+    margin-bottom:35px;
 }
 
-a{
-    display:block;
+.link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
     background:#1a1a1a;
     color:white;
     text-decoration:none;
     padding:15px;
-    margin:12px 0;
-    border-radius:10px;
+    margin:14px 0;
+    border-radius:12px;
+    font-size:16px;
     transition:0.3s;
 }
 
-a:hover{
+.link i{
+    font-size:20px;
+}
+
+.link:hover{
     background:#333;
-    transform:scale(1.02);
+    transform:scale(1.03);
 }
 </style>
 </head>
@@ -51,10 +62,21 @@ a:hover{
     <h1>Ahmed</h1>
     <p>روابط حساباتي الرسمية</p>
 
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://tiktok.com" target="_blank">TikTok</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="https://x.com" target="_blank">X (Twitter)</a>
+    <a class="link" href="https://youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i> YouTube
+    </a>
+
+    <a class="link" href="https://tiktok.com" target="_blank">
+        <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+
+    <a class="link" href="https://instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+
+    <a class="link" href="https://x.com" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i> X (Twitter)
+    </a>
 </div>
 </body>
 </html>
