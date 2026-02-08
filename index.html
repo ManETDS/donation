@@ -4,55 +4,96 @@
 <meta charset="UTF-8">
 <title>روابط أحمد</title>
 
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+*{
+    box-sizing:border-box;
+}
+
 body{
-    background:#0b0b0b;
+    background:radial-gradient(circle at top, #111, #000);
     color:#ffffff;
     font-family: Arial, sans-serif;
     text-align:center;
     margin:0;
     padding:0;
+    overflow-x:hidden;
 }
 
 .container{
     max-width:420px;
-    margin:80px auto;
+    margin:90px auto;
+    opacity:0;
+    animation:fadeIn 1.2s ease forwards;
 }
 
 h1{
     margin-bottom:8px;
+    letter-spacing:1px;
 }
 
 p{
     opacity:0.6;
-    margin-bottom:35px;
+    margin-bottom:40px;
 }
 
 .link{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
-    background:#1a1a1a;
+    gap:14px;
+    background:linear-gradient(145deg, #1a1a1a, #0e0e0e);
     color:white;
     text-decoration:none;
-    padding:15px;
-    margin:14px 0;
-    border-radius:12px;
+    padding:16px;
+    margin:16px 0;
+    border-radius:14px;
     font-size:16px;
-    transition:0.3s;
+    transition:transform 0.35s ease, box-shadow 0.35s ease;
+    animation:slideUp 0.8s ease forwards;
 }
+
+.link:nth-child(3){ animation-delay:0.2s }
+.link:nth-child(4){ animation-delay:0.35s }
+.link:nth-child(5){ animation-delay:0.5s }
+.link:nth-child(6){ animation-delay:0.65s }
 
 .link i{
     font-size:20px;
+    transition:transform 0.3s ease;
 }
 
 .link:hover{
-    background:#333;
-    transform:scale(1.03);
+    transform:translateY(-4px) scale(1.02);
+    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+.link:hover i{
+    transform:scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 </style>
 </head>
